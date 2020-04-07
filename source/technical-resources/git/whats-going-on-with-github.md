@@ -1,0 +1,13 @@
+# What is git?
+
+(keywords mostly italicized.)
+
+Git helps keep track of changes made to source code (well, anything, really, but people mostly use it for source code).  A _repository_ stores code files and all the changes (the _history_) that have ever been made to them. When you _clone_ a repository, you copy both all of the code and the history to your computer.  These two things---the code and the history---are separate.  
+
+(there's also a big concept in git called "branching" that I'm completely ignoring for the purposes of this explanation.)
+
+If you were the only programmer working on a repository, you could just _commit_ over and over to save your changes to your own history, and there'd be no problems.  The history on your machine would be the only history, and the only reason to _push_ those changes and the changed code to github would be to have a copy of your work stored somewhere that's not your own computer (this is a good idea, by the way---it keeps you from losing work if  something happens to your computer).  However, when many people are working on the same repository, there needs to be a way to combine everyone's changes into one place.   If I make 10 changes and you make 10 changes, both our code and our histories are now different, and we need to find a way to combine them. 
+
+_upstream_ is the place your copy of the repository came from (your copy is _downstream_ from it).  A copy of a repository that's stored on the internet or elsewhere on a network from your computer is _remote_.  The _master_ copy is the central copy with the central history (ideally with everyone's changes).  When you _fetch_ from the remote master repository, you're getting copies of all the new changes you don't have yet on your computer (but you're not applying them to the code!  You're just getting the changes in the history.  Remember, they're different).  To apply the changes, you need to _merge_ the changes/commits you've made with the commits that have come in.  A _pull_ fetches and then merges all in one step.
+
+Merging takes the changes other people have applied and tries to automagically combine them with the changes you've applied.  Sometimes this is easy.  If you change just the first paragraph of this explanation and I make a change to the third paragraph, then the system can just apply them both; there's no conflict between them.  IF we both commit a change to this very line in this paragraph, however, git might not know how to combine them.  Someone has to tell it. That's where manual merging comes in, which will be explained elsewhere (and hopefully Claire will remember to link!).
