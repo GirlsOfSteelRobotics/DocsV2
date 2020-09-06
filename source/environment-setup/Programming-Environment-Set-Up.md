@@ -2,7 +2,7 @@
 
 Joseph Jackson
 
-The official FIRST documentation for installing the FRC programming tools is a bit convoluted and time consuming. I've created a streamlined process for Girls of Steel by:
+The official FIRST documentation for installing the FRC programming tools is a bit convoluted and time-consuming. I've created a streamlined process for Girls of Steel by:
   * downloading and unpacking all the files ahead of time,
   * focusing only on Java and the third-party libraries we rely on,
   * writing scripts to automate many of the steps on the Mac, and
@@ -31,7 +31,7 @@ The official FIRST documentation for installing the FRC programming tools is a b
                 * Switch to the `General` tab
                 * Click the `Open Anyway` button, if present
                 * Back in the error dialog, click `Cancel`
-                * Let the install script finish, but be sure to run it again to complete any canceled steps
+                * Let the installer script finish, but be sure to run it again to complete any canceled steps
         1. Launch (double-click) the `CTRE-Installer.command` script
             * A Terminal window will open to show the progress as the script runs
             * Confirm there aren't any error messages; If so, show them to Joe

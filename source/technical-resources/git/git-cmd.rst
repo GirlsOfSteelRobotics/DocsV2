@@ -5,7 +5,7 @@ Git Command Line
 
 Because `Real Programmers`_ use the command line
 
-Sometimes there are situations where doing things from the command line are infinitly 
+Sometimes there are situations where doing things from the command line are infinitely
 easier than trying to use the GUI build into an IDE, so it is a good idea to get some 
 of the common commands under your belt.
 
@@ -15,7 +15,7 @@ Clone a repository
 
 The URL can be retrieved from GitHub., i.e
 
-|gitub-url-example|
+|github-url-example|
 
 .. code-block:: sh
 
@@ -27,7 +27,7 @@ Get the latest from GitHub
 TL;DR
 Run a :code:`git pull` to get the latest
 
-There are two ways to get the lastest updates from Github, a :code:`git fetch` and a :code:`git pull`.
+There are two ways to get the latest updates from Github, a :code:`git fetch` and a :code:`git pull`.
 
 A :code:`git fetch` will download the latest updates for all remote branches, but it will not update your local branch. This is an advanced feature that you will probably not need.
 
@@ -38,14 +38,14 @@ everything from GitHub, and if you branch is tracking a remote branch, it will u
 Switching Branches
 ------------------
 :code:`git checkout <branch name>` will switch from your current branch, to the one you specify. You can use this when you are 
-swiching between what features you are working on, or to checkout a branch that already exists on the remote, like if you are
-picking up from where a teamate left off at the previous meeting.
+switching between what features you are working on, or to checkout a branch that already exists on the remote, like if you are
+picking up from where a teammate left off at the previous meeting.
 
 .. code-block:: sh
    
    git checkout master
 
-Adding the :code:`-b` option will allow you to create a new branch and immediatly switch to it. You would do this when
+Adding the :code:`-b` option will allow you to create a new branch and immediately switch to it. You would do this when
 you are starting to work on a branch new issue
 
 .. code-block:: sh
@@ -76,7 +76,7 @@ the suggestion they give you, and run that command
 
 .. code-block:: sh
 
-   F:\git\FIRST\2020\3504\2020GirlsofSteel>git push
+   F:\git\FIRST\2020\3504\2020GirlsOfSteel>git push
    fatal: The current branch example_branch has no upstream branch.
    To push the current branch and set the remote as upstream, use
 
@@ -84,21 +84,21 @@ the suggestion they give you, and run that command
 
 Look at your current status
 ---------------------------
-Running a :code:`git status` will show you all of the new/deleted/changes files you currently have that have not been commited.
+Running a :code:`git status` will show you all of the new/deleted/changes files you currently have that have not been committed.
 It will also tell you important information when you are in the middle of a merge that has conflicts.
 |git-status|
 
 .. _Real Programmers: https://xkcd.com/378/
-.. |gitub-url-example| image:: images/github-clone-url.png
+.. |github-url-example| image:: images/github-clone-url.png
 .. |git-status| image:: images/git-status.png
 
 Merging Branches
 ----------------
 :code:`git merge <branch name>` will merge all of commits from that branch with yours. This important when your feature
-breanch is out of date, and you need to get the latest stuff from master. When we merge a Pull Request, GitHub is running
+branch is out of date, and you need to get the latest stuff from master. When we merge a Pull Request, GitHub is running
 this command for us to get your features back into master.
 
-Note that there might be conflicts when you run the merge. It is your resonsibility to fix these issues and retest your code
+Note that there might be conflicts when you run the merge. It is your responsibility to fix these issues and retest your code
 before we can approve your PR and merge it into master
 
 .. code-block:: sh

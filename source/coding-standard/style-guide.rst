@@ -27,7 +27,7 @@ Variable Names
 Braces and Spacing
 ------------------
 
-- All keywords (i.e :code:`if, switch, for`, etc) and math operands (:code:`+, -, <`, etc) should be seperated by a space
+- All keywords (i.e :code:`if, switch, for`, etc) and math operands (:code:`+, -, <`, etc) should be separated by a space
 
     .. code-block:: java
 

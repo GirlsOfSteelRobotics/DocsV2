@@ -1,6 +1,6 @@
 # LIDAR-Lite
 
-LIDAR-Lite is a low-cost distance sensor with a range and accuracy that makes it ideal for use on FRC robots. For around $150, it can range over 40 meters with an accuracy of 2.5 cm. It was created by [Pulsed Light](https://www.pulsedlight3d.com/), now part of [Garmin](https://www.garmin.com/en-US/). There have been three version of the product. The first two were sold by Pulsed Light before the Garmin acquisition. Some useful links:
+LIDAR-Lite is a low-cost distance sensor with a range and accuracy that makes it ideal for use on FRC robots. For around $150, it can range over 40 meters with an accuracy of 2.5 cm. It was created by [Pulsed Light](https://www.pulsedlight3d.com/), now part of [Garmin](https://www.garmin.com/en-US/). There have been three versions of the product. The first two were sold by Pulsed Light before the Garmin acquisition. Some useful links:
 
 * A few of our favorite sources for LIDAR-Lite v3 (current model as of January 2018)
     * https://buy.garmin.com/en-US/US/p/557294
@@ -20,11 +20,11 @@ All versions of the LIDAR-Lite unit support both I2C (a two-wire bus interface) 
 
 ### I2C
 
-The I2C interface is very flexible and easy to use, but has been flakey when connected to the FRC roboRIO. I suspect the root cause is having pull-up resistors on the clock and data lines of _both_ the LIDAR-Lite and the roboRIO, but I haven't fully diagnosed it myself. [Chief Delphi](https://www.chiefdelphi.com/) has many discussions and potential work arounds. In the end, none of them worked out for us and we switched to the PWM connection option.
+The I2C interface is very flexible and easy to use, but has been flaky when connected to the FRC RoboRIO. I suspect the root cause is having pull-up resistors on the clock and data lines of _both_ the LIDAR-Lite and the roboRIO, but I haven't fully diagnosed it myself. [Chief Delphi](https://www.chiefdelphi.com/) has many discussions and potential workarounds. In the end, none of them worked out for us, and we switched to the PWM connection option.
 
 ### PWM Output
 
-Using an alternate set of pins, the LIDAR-Lite can also produce a pulse-width modulated (PWM) output signal. This just means it raises the logic level of a digital output pin for a time that's in proportion to the measured distance. Specifically, the output goes high for 10 microseconds per centimeter of measured distance. This is easy to wire to the roboRIO, requiring only a single resistor and one DIO port in the minimal configuration.
+Using an alternate set of pins, the LIDAR-Lite can also produce a pulse-width modulated (PWM) output signal. This just means it raises the logic level of a digital output pin for a time in proportion to the measured distance. Specifically, the output goes high for 10 microseconds per centimeter of measured distance. This is easy to wire to the roboRIO, requiring only a single resistor and one DIO port in the minimal configuration.
 
 Reading the duration of the PWM output is actually very simple on the roboRIO because its FPGA implements the necessary level detectors and timers. Many people on Chief Delphi have suggested converting the signal to analog, but I strongly disagree with that approach since it loses accuracy.
 

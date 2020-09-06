@@ -19,7 +19,7 @@ We have a number of team laptops that we try to set up in a consistent fashion. 
   * Add bookmarks to the Bookmarks Toolbar for important resources
     * GitHub http://github.com/GirlsOfSteelRobotics/Docs/wiki
     * FRC Javadocs http://first.wpi.edu/FRC/roborio/release/docs/java/
-    * FRC Screensteps https://wpilib.screenstepslive.com/s/4485
+    * FRC Screen Steps https://wpilib.screenstepslive.com/s/4485
     * RoboRIO http://roborio-3504-frc.local/
 
 * Install Silverlight, needed for the RoboRIO web interface https://microsoft.com/silverlight/

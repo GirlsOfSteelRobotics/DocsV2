@@ -48,7 +48,7 @@ the commit/push process. There are a lot more options available in the "VCS -> G
 3. Source Tree
 ______________
 This is where we can see all of the files for our project. Unlike VS Code, you have to manually open folders that
-have only one subfolder in them which can be a little bit more tedious. Our robot code is located under 
+have only one sub-folder in them which can be a little bit more tedious. Our robot code is located under
 the "src/main/java/frc.robot" folders
 
 4. FRC Tab / RioLog
@@ -60,15 +60,15 @@ FRC Plugin
 ----------
 
 The Intellij FRC plugin is an open source project to provide a lot of helpful features for us when we are developing software
-for FRC robots. It eases the creation of Subsytems and Commands by filling in a lot of the boiler plate code for use.
+for FRC robots. It eases the creation of Subsystems and Commands by filling in a lot of the boiler plate code for use.
 
 Adding a Subsystem
 __________________
 Right click on the package where you want to put the subsystem (almost certainly :code:`frc.robot.subsystems`), and click "New -> FRC -> Subsystem"
 
-The substem it creates is very sparse. At the very least, you will probably want to add a :code:`periodic` function
+The subsystem it creates is very sparse. At the very least, you will probably want to add a :code:`periodic` function
 
-|intellij-create-subsytem|
+|intellij-create-subsystem|
 
 Adding a Command
 ________________
@@ -79,6 +79,6 @@ the option to select what subsystems this command requires to save you some typi
 
 .. |intellij-plugin-setup| image:: images/intellij-plugin-setup.gif
 .. |intellij-markup| image:: images/intellij-markup.png
-.. |intellij-create-subsytem| image:: images/intellij-create-subsystem.gif
+.. |intellij-create-subsystem| image:: images/intellij-create-subsystem.gif
 .. |intellij-create-command| image:: images/intellij-create-command.gif
 .. _toolbox: https://www.jetbrains.com/toolbox-app/
