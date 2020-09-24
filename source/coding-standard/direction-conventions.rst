@@ -24,7 +24,7 @@ Digital Input Conventions
 -------------------------
 
 Any getters in the code or things sent to the dashboard should return :code:`true` when the sensor is tripped. This is 
-often the opposite of how the sensor behaves nativly, so it must be inverted in the code
+often the opposite of how the sensor behaves natively, so it must be inverted in the code
 
 Examples:
 
@@ -34,10 +34,10 @@ Examples:
 Field Coordinate System
 -----------------------
 
-The field coordinate system matches the standard mathmatical definition (which sucks). 
+The field coordinate system matches the standard mathematical definition (which sucks).
 
 Imagine the field is 
-layed out such that the long dimension goes along the x axis, and the short dimension goes along the y axis.
+laid out such that the long dimension goes along the x axis, and the short dimension goes along the y axis.
 The origin point (0, 0) is located at the top left, while the bottom right is defined as (long dim, -short dim).
 
 .. parsed-literal::

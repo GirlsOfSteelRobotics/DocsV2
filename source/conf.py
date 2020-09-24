@@ -31,7 +31,7 @@ release = '0.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-	'recommonmark',
+    'recommonmark',
     'sphinx_markdown_tables',
 ]
 
@@ -60,6 +60,6 @@ html_static_path = ['_static']
 html_logo = 'rosie.jpg'
 
 html_theme_options = {
-	'collapse_navigation': False,
-	'sticky_navigation': False
+    'collapse_navigation': False,
+    'sticky_navigation': False
 }
