@@ -7,15 +7,23 @@ In this lab, you will implement and test a command-line calculator app.
 
 Unlike most of the code you will work with in GoS, you should be able to understand the majority of this code. 
 
-Here is the project we will be using https://github.com/GirlsOfSteelRobotics/Git-Workflow-Codelab
+The project code is located in the monorepo: https://github.com/GirlsOfSteelRobotics/GirlsOfSteelMonoRepo in the codelabs/basic_java folder. 
 
 Part One
 ________
 
 1. Run the existing calculator
 ------------------------------
-One function (add) has been implemented for you. Click the green play button to run the calculator.
+One function (add) has been implemented for you. Select "run calculator" (shown in the menu screenshot below) and click the green play button to run the calculator (also shown in a screenshot below)
+
+.. image:: images/run_calculator_tree.png
+
+.. image:: images/runbar.png
+
 At the bottom of the screen, follow the prompts to add 2 numbers and print the result. 
+
+.. image:: images/run_expected_output.png
+
 What happens?
 
 2. Find the file you just ran
@@ -24,7 +32,9 @@ Code files are generally in :code:`src`, though often nested in many layers of f
 
 Read the file. Look for the main method, which is anything between the curly brackets in :code:`public static void main(String[] args)`
 It's okay if you don't know what all of those words mean yet. It basically means the class has a function 
-available outside of it that does not output anything. 
+available outside of it that does not output anything. The image below breaks the components down. 
+
+.. image:: images/calculator_class.png
 
 Although there are nicer ways of doing this, the simplest way to build a string is to use a :code:`+` operator 
 between the strings. 
@@ -39,6 +49,7 @@ Change the line in the code to anything else. For example, to print `Alex typed 
 -----------------------------
 Java uses objects, which are structures that contain data and perform functions.
 More details: https://docs.oracle.com/javase/tutorial/java/concepts/index.html
+
 In Java, the syntax (pattern of typing code that can be read by what builds it) of creating an object is
 :code:`Object nameOfMyObject = new Object()`
 The parentheses go around the inputs to the object, which in this example is empty. 
@@ -63,13 +74,13 @@ Find the Calculator.java file. Look at the structure. What are the functions it 
 Where is the add function?
 
 Let's understand what the functions mean. 
-`public` means the function can be accessed anywhere. It is the least restrictive type of access. The opposite is `private`
-`double` means a computer's approximation of a real number, with decimals. Ex) 4.563201 is best represented using a double. 
+:code:`public` means the function can be accessed anywhere. It is the least restrictive type of access. The opposite is :code:`private`
+:code:`double` means a computer's approximation of a real number, with decimals. Ex) 4.563201 is best represented using a double. 
 
 
 7. Add functions to Calculator.java
 -----------------------------------
-Following the pattern of `add` add more useful functions to `Calculator.java`. Java operators are similar 
+Following the pattern of :code:`add` add more useful functions to :code:`Calculator.java`. Java operators are similar 
 to what you use on your graphing calculator. Ex:
 
 1. subtract: x-y
@@ -111,7 +122,9 @@ If it is not, it throws an error. Why might this be useful for checking if our c
 1. Find CalculatorTest.java.  
 ----------------------------
 You can find it in your IDE. If you prefer, you can also use Windows Explorer or Mac Finder to find this file. 
-Run :code:`test calculator`
+Run "test calculator" from the menu above
+
+.. image:: images/test_calculator_tree.png
 
 2. Make a test fail
 -------------------
