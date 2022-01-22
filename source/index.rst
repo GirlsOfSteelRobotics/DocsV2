@@ -60,6 +60,12 @@ Follow the steps in *Environment Setup* to install all of the required tools, th
 
    code-labs/code-labs
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Monorepo:
+
+   monorepo/monorepo-intro
+
 
 Indices and tables
 ==================
