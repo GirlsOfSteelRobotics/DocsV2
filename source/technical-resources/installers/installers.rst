@@ -10,3 +10,4 @@ Installers
    Software-Installers-Kept-on-USB-Drive
    Team-Laptop-Setup
    Upgrading-Firmware-and-Setting-Up-Electronics
+   Changing-Team-Number
