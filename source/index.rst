@@ -4,7 +4,9 @@
 Welcome to the Girls of Steel documentation page for programmers
 ================================================================
 
-Helpful links:
+.. toctree::
+   :maxdepth: 1
+   :caption: Helpful links:
 
 .. _WPI Documentation: https://docs.wpilib.org/en/latest/
 .. _wpilib Source Code: https://github.com/wpilibsuite/allwpilib
@@ -21,7 +23,7 @@ Helpful links:
 - `Latest Robot Code`_
 
 
-Follow the steps in *Environment Setup* to install all of the required tools, then read through the rest of the documentation for details about or coding standard and workflow practices.
+Follow the steps in *Environment Setup* to install all of the required tools, then read through the rest of the documentation for details about our coding standard and workflow practices.
 
 .. toctree::
    :maxdepth: 1
