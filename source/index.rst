@@ -1,10 +1,10 @@
-.. GirlsOfSteelDocs documentation master file, created by
-   sphinx-quickstart on Sun Apr  5 15:58:05 2020.
-
 Welcome to the Girls of Steel documentation page for programmers
 ================================================================
 
 Follow the steps in *Environment Setup* to install all of the required tools, then read through the rest of the documentation for details about our coding standard and workflow practices.
+
+Helpful links:
+--------------
 
 .. _WPI Documentation: https://docs.wpilib.org/en/latest/
 .. _wpilib Source Code: https://github.com/wpilibsuite/allwpilib
@@ -12,9 +12,6 @@ Follow the steps in *Environment Setup* to install all of the required tools, th
 .. _REV Documentation: http://www.revrobotics.com/sparkmax-software/
 .. _SnobotSim Documentation: https://snobotsimdocs.readthedocs.io/en/latest/
 .. _Latest Robot Code: https://github.com/GirlsOfSteelRobotics/2020GirlsofSteel
-
-Helpful links:
-==============
 
 - `WPI Documentation`_
 - `wpilib Source Code`_
