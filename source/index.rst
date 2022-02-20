@@ -13,16 +13,15 @@ Follow the steps in *Environment Setup* to install all of the required tools, th
 .. _SnobotSim Documentation: https://snobotsimdocs.readthedocs.io/en/latest/
 .. _Latest Robot Code: https://github.com/GirlsOfSteelRobotics/2020GirlsofSteel
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Helpful links:
+Helpful links:
+==============
 
-   - `WPI Documentation`_
-   - `wpilib Source Code`_
-   - `CTRE Documentation`_
-   - `REV Documentation`_
-   - `SnobotSim Documentation`_
-   - `Latest Robot Code`_
+- `WPI Documentation`_
+- `wpilib Source Code`_
+- `CTRE Documentation`_
+- `REV Documentation`_
+- `SnobotSim Documentation`_
+- `Latest Robot Code`_
 
 .. toctree::
    :maxdepth: 1
