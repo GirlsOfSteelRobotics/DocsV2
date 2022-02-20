@@ -6,6 +6,8 @@ Follow the steps in *Environment Setup* to install all of the required tools, th
 .. toctree::
    :maxdepth: 1
    :caption: Helpful links:
+   
+   helpful-links/helpful-links
 
 .. toctree::
    :maxdepth: 1
