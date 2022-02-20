@@ -1,8 +1,8 @@
 .. GirlsOfSteelDocs documentation master file, created by
    sphinx-quickstart on Sun Apr  5 15:58:05 2020.
 
-Welcome to GirlsOfSteelDocs's documentation!
-============================================
+Welcome to the Girls of Steel documentation page for programmers
+================================================================
 
 Helpful links:
 
