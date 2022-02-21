@@ -1,3 +1,5 @@
+The links below are commonly used FRC programming references.
+
 .. _WPI Documentation: https://docs.wpilib.org/en/latest/
 .. _wpilib Source Code: https://github.com/wpilibsuite/allwpilib
 .. _CTRE Documentation: https://phoenix-documentation.readthedocs.io/en/latest/
