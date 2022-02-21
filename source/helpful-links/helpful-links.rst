@@ -2,8 +2,9 @@
 .. _wpilib Source Code: https://github.com/wpilibsuite/allwpilib
 .. _CTRE Documentation: https://phoenix-documentation.readthedocs.io/en/latest/
 .. _REV Documentation: http://www.revrobotics.com/sparkmax-software/
+.. _Electronics Status Lights: https://docs.wpilib.org/en/stable/docs/hardware/hardware-basics/status-lights-ref.html
 .. _SnobotSim Documentation: https://snobotsimdocs.readthedocs.io/en/latest/
-.. _Latest Robot Code: https://github.com/GirlsOfSteelRobotics/2020GirlsofSteel
+.. _Latest Robot Code: https://github.com/GirlsOfSteelRobotics/GirlsOfSteelFRC/y2022
 
 `WPI Documentation`_
 ---------------------
@@ -16,6 +17,9 @@
 
 `REV Documentation`_
 ---------------------
+
+`Electronics Status Lights`_
+----------------------------
 
 `SnobotSim Documentation`_
 --------------------------
