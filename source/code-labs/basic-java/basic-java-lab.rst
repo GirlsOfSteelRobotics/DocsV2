@@ -9,6 +9,50 @@ Unlike most of the code you will work with in GoS, you should be able to underst
 
 The project code is located in the monorepo: https://github.com/GirlsOfSteelRobotics/GirlsOfSteelMonoRepo in the codelabs/basic_java folder. 
 
+
+.. note:: If you have not set up intellij or cloned the mono repo you can use this `online editor <https://www.online-java.com/>`_ and copy and paste the code below
+
+
+.. collapse:: Click to reveal the code
+
+    
+    .. code-block::
+        
+        import java.util.Scanner;
+
+        class Calculator {
+            public double add(double x, double y) {
+                return x + y;
+            }
+        }
+
+        @SuppressWarnings("PMD.CloseResource")
+        public class Main {
+            public static void main(String[] args) {
+                // creates a scanner that waits and processes keyboard input
+                Scanner input = new Scanner(System.in);
+                
+                System.out.println("Input a number: ");
+                double number = input.nextDouble();
+        
+                System.out.println("You enetered " + number);
+
+                // TODO Task 1: Ask for 2 numbers and output the sum using a myCalculator
+                // TODO Bonus Task 2: Ask which operation the user would like to use (use input.nextLine())
+                //              and then run that operation
+                // if statements would be helpful here: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
+                
+                // Skip newline
+                // input.nextLine();
+                // if (operation == '+') {
+                // }
+
+            }
+        }
+        
+
+
+
 Part One
 ________
 
