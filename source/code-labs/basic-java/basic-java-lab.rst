@@ -17,7 +17,7 @@ The project code is located in the monorepo: https://github.com/GirlsOfSteelRobo
 
     
     .. code-block::
-        
+    
         import java.util.Scanner;
 
         class Calculator {
@@ -34,17 +34,15 @@ The project code is located in the monorepo: https://github.com/GirlsOfSteelRobo
                 
                 System.out.println("Input a number: ");
                 double number = input.nextDouble();
-        
-                System.out.println("You enetered " + number);
-
+                System.out.println("The number typed was " + number);
+                input.close();
                 // TODO Task 1: Ask for 2 numbers and output the sum using a myCalculator
                 // TODO Bonus Task 2: Ask which operation the user would like to use (use input.nextLine())
                 //              and then run that operation
                 // if statements would be helpful here: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
-                
-                // Skip newline
-                // input.nextLine();
-                // if (operation == '+') {
+                // char operation = input.nextLine().charAt(0);
+                // if (operation == "+") {
+                //     TODO your code here
                 // }
 
             }
