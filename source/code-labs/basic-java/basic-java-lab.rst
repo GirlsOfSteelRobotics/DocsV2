@@ -40,8 +40,12 @@ The project code is located in the monorepo: https://github.com/GirlsOfSteelRobo
                 // TODO Bonus Task 2: Ask which operation the user would like to use (use input.nextLine())
                 //              and then run that operation
                 // if statements would be helpful here: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
+                // 
+                // // Skip the newline
+                // input.nextLine();
+                // 
                 // char operation = input.nextLine().charAt(0);
-                // if (operation == "+") {
+                // if (operation == '+') {
                 //     TODO your code here
                 // }
 
