@@ -10,8 +10,6 @@ All of the examples work out of the GitHub repository, https://github.com/GirlsO
 You will need to clone it locally to start working
 
 
-|gitflow-import|
-
 .. toctree::
    :maxdepth: -1
    :caption: Code Labs:
@@ -20,6 +18,3 @@ You will need to clone it locally to start working
    simulator/simulator-lab
    custom-shuffleboard/custom-shuffleboard-lab
    basic-java/basic-java-lab
-
-
-.. |gitflow-import| image:: gitflow/images/codelab-import.gif
