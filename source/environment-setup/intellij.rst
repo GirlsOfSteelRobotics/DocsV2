@@ -27,6 +27,18 @@ To install a plugin, go to "File -> Settings -> Plugins". Select the "Marketplac
 |intellij-plugin-setup|
 
 
+Configuring wpilib JDK
+----------------------
+By default Intellij will install some recent version of the JDK, but it is not always compatible with the wpilib tools, so
+it is recommended to point the project to the one that came with your wpilib install.
+
+On Windows, this is installed at :code:`C:\\Users\\Public\\wpilib\\<year>\\jdk`
+
+On Mac, this is installed :code:`~/wpilib/<year>/jdk`
+
+1. To hook it up, open :code:`File -> Project Structure -> SDKs`. Click the + sign to :code:`Add JDK from disk`, and point it to the JDK folder listed above
+2. Tell gradle to use that JDK by going to :code:`File -> Settings -> Build, Excecution, Deployment -> Build Tools -> Gradle` and update the :code:`Gradle JVM` to be `Project SDK`
+
 Navigating Intellij
 -------------------
 When you open intellij, you will see a screen that looks like this.
