@@ -88,13 +88,13 @@ Once that is complete, you can run the :code:`MovePunchCommandTest`. Once the te
 
 Implement the Elevator Manual Controls
 --------------------------------------
-The elevator subsystem uses a motor controller to make the physical motor spin. Motors can go multiple
-different speeds, and the library provides a nice API where we can tell the motor to go full speed forwards
-by **SET**\ ing it to 1.0, and making it go full speed backwards by **SET**\ ing it to -1.0. We can
-also do any speed in between, like going half speed forwards by **SET**\ ing it to 0.5, or making it go
-backwards at 10% speed by **SET**\ ing it to -0.1. For the elevator, "forwards" means up.
+The elevator subsystem uses a motor controller to make the physical motor spin. We control how hard the motor
+pushes with a **THROTTLE**, which is a number between -1.0 and 1.0, a lot like the gas pedal in a car. We can tell the motor
+to go full throttle forwards by **SET**\ ing it to 1.0, and full throttle backwards by **SET**\ ing it to -1.0. We can
+also do anything in between, like going half throttle forwards by **SET**\ ing it to 0.5, or going
+backwards at 10% throttle by **SET**\ ing it to -0.1. For the elevator, "forwards" means up.
 
-For manual control, we have a function called :code:`setSpeed`, and we will give that value
+For manual control, we have a function called :code:`setThrottle`, and we will give that value
 directly to the motor controller, :code:`m_liftMotor`. The :code:`stop` function should **SET** the motor to 0.
 
 The elevator also has an encoder, :code:`m_liftEncoder`, and we can ask it for its current position. We should fill out
@@ -113,11 +113,11 @@ Implement the Chassis Manual Controls
 Similar to the elevator, the chassis has a motor controller and an encoder for each side. However, the FIRST library
 provides a nice helper class, :code:`DifferentialDrive` which does some fancy math to help us implement our
 arcade drive functionality, so we won't be **SET**\ ing the motor controllers directly, but rather talking to that class's
-:code:`arcadeDrive` function, using the :code:`m_differentialDrive` member variable. This function takes in a speed
-(aka throttle, aka how fast we want to drive straight), and a rotation value (how much we want to curve/spin).
+:code:`arcadeDrive` function, using the :code:`m_differentialDrive` member variable. This function takes in a throttle
+(how fast we want to drive straight), and a rotation value (how much we want to curve/spin).
 Like the rest of WPILib, a positive rotation turns the robot counter-clockwise (to the left).
 
-For our :code:`arcadeDrive` function, we can pass the :code:`speed` and :code:`steer` arguments straight through to
+For our :code:`arcadeDrive` function, we can pass the :code:`throttle` and :code:`steer` arguments straight through to
 :code:`m_differentialDrive`. For :code:`stop`, :code:`DifferentialDrive` has a :code:`stopMotor` function.
 
 We will also want to fill out the :code:`getLeftDistance` and :code:`getRightDistance` functions, like we did with the elevator.
@@ -141,9 +141,9 @@ to a [-1.0, 1.0] range, so the mapping is easy.
 To do this, we go into the :code:`DriveChassisWithJoystickCommand` and :code:`ElevatorWithJoystickCommand` commands. Each one
 is given the :code:`CommandXboxController` it should listen to. When they **EXECUTE**:
 
-- The chassis should call :code:`arcadeDrive`. The speed should come from the **LEFT** stick's **Y** axis (:code:`getLeftY`),
+- The chassis should call :code:`arcadeDrive`. The throttle should come from the **LEFT** stick's **Y** axis (:code:`getLeftY`),
   and the steering should come from the **RIGHT** stick's **X** axis (:code:`getRightX`).
-- The elevator should call :code:`setSpeed`, with the value from the **RIGHT** stick's **Y** axis (:code:`getRightY`).
+- The elevator should call :code:`setThrottle`, with the value from the **RIGHT** stick's **Y** axis (:code:`getRightY`).
 
 **IMPORTANT NOTE** The joysticks don't use the same directions as the robot, so you will need to negate (put a minus sign
 in front of) all of these values:
@@ -170,9 +170,9 @@ Implement Driving with Timers
 Most of the time in autonomous, we want finer grained controls than just "drive forwards for a couple seconds and hope
 we don't hit a wall", but it is always a good command to have in our back pocket in case all of our sensors break.
 
-To do this, the :code:`AutoDriveStraightTimedCommand` will drive straight with some speed (either forwards or backwards), for an
+To do this, the :code:`AutoDriveStraightTimedCommand` will drive straight with some throttle (either forwards or backwards), for an
 amount of time. WPILib provides a :code:`Timer`, :code:`m_timer`, that we can **RESTART** when our command **INITIALIZE**\ s.
-Each time our command **EXECUTE**\ s we can call :code:`arcadeDrive` with our speed argument, and no steering.
+Each time our command **EXECUTE**\ s we can call :code:`arcadeDrive` with our throttle argument, and no steering.
 Our command **IS FINISHED** when the timer **HAS ELAPSED** our time argument.
 
 Note, it is important that when we **END** our command, we stop driving, otherwise the chassis
@@ -188,7 +188,7 @@ More often, we will want to tell the robot to drive some distance in autonomous 
 To **EXECUTE** the :code:`AutoDriveStraightDistanceCommand`, we will want to figure out how far away we are from our goal
 (the **ERROR**, which is the goal distance minus our current **AVERAGE DISTANCE**), and save it in :code:`m_error`.
 If the error is positive, we need to drive forwards (positive throttle), and if it is negative, we need to drive backwards
-(negative throttle). A speed around 0.5 works well. We can say we are **FINISHED** when we are close enough to our goal distance.
+(negative throttle). A throttle around 0.5 works well. We can say we are **FINISHED** when we are close enough to our goal distance.
 Like the previous command, it is important that when we **END** our command, we stop driving.
 
 **IMPORTANT NOTE** We will never hit our goal right on the nose. Doing a :code:`current == goal` check will (pretty much)
@@ -208,7 +208,7 @@ reached our goal height. Since we will use this in a couple of places, we put th
 
 - Figure out the error between the goal height and the current height
 - If we are within :code:`ALLOWABLE_POSITION_ERROR` of the goal, stop the motor and return :code:`true`
-- Otherwise, **SET** the **SPEED** to move up or down towards the goal (around 0.5 works well), and return :code:`false`
+- Otherwise, **SET** the **THROTTLE** to move up or down towards the goal (around 0.5 works well), and return :code:`false`
 
 You can now run the :code:`ElevatorSubsystemTest.testGoToPosition` test.
 
@@ -238,13 +238,13 @@ Implement the Shooter
 ---------------------
 The shooter is a spinning wheel, and it works a lot like the elevator. In :code:`ShooterSubsystem`:
 
-- :code:`setSpeed` and :code:`stop` **SET** the motor speed, just like the elevator
+- :code:`setThrottle` and :code:`stop` **SET** the motor throttle, just like the elevator
 - :code:`getRpm` **GET**\ s the **VELOCITY** from the encoder, which has been set up to be in RPM
 - :code:`isAtRpm` returns :code:`true` if we are within :code:`ALLOWABLE_RPM_ERROR` of the goal RPM
 
 The fun part is :code:`spinAtRpm`, which gets called every loop to get the wheel up to the goal RPM. Unlike the elevator,
 a spinning wheel doesn't need to be stopped exactly at a position, and it slows down on its own, so we can use
-a very simple strategy called "bang-bang" control: if the wheel is going slower than the goal, run the motor at full speed (1.0),
+a very simple strategy called "bang-bang" control: if the wheel is going slower than the goal, run the motor at full throttle (1.0),
 and if it is going faster than the goal, turn the motor off (0).
 
 Once that is complete, you can run the :code:`ShooterSubsystemTest`.
