@@ -5,7 +5,8 @@ Code Labs
 
 These code labs walk you through our general workflow process and working with the simulator.
 
-All of the examples work out of the GitHub repository, https://github.com/GirlsOfSteelRobotics/Git-Workflow-Codelab
+All of the examples work out of our main robot code repository, https://github.com/GirlsOfSteelRobotics/GirlsOfSteelFRC,
+in the :code:`codelabs` folder.
 
 You will need to clone it locally to start working
 
