@@ -17,5 +17,4 @@ You will need to clone it locally to start working
 
    git-flow/gitflow-lab
    simulator/simulator-lab
-   custom-shuffleboard/custom-shuffleboard-lab
    basic-java/basic-java-lab
