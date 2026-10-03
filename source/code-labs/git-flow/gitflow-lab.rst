@@ -30,7 +30,7 @@ Something along the line of :code:`System.out.println("<name> says hello world i
 In :code:`RobotContainer`, declare your subsystem.
 
 5. Run the simulator
-----------------
+--------------------
 Run it from the run configurations area, and make sure your string gets printed out
 
 6. Commit, Push, Create PR
